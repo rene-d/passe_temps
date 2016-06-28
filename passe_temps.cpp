@@ -1,7 +1,5 @@
 // vim:set ts=4 sw=4 et:
 //
-// compile with: clang++ -std=c++14 -O2 chrono.cpp -lboost_chrono -lboost_system
-//
 #include <cstdio>
 #include <cassert>
 #include <cstring>
@@ -116,7 +114,7 @@ public:
         for (auto& i : stack_)
         {
             double d = i.elapsed.count() * ((double)hr_clock::period::num / hr_clock::period::den);
-            std::cout << boost::format("  %-6s: %4s call(s)  %8.6f s   %7.6f s/call") % i.nom % i.calls % d % (d / i.calls) << std::endl;
+            std::cout << boost::format("  %-6s: %4s call(s)  %8.6f s   %7.3f ms/call") % i.nom % i.calls % d % (d / i.calls * 1000.) << std::endl;
         }
     }
 };
