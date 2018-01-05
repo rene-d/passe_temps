@@ -1,5 +1,7 @@
 # passe_temps
 
+![Build Status](https://travis-ci.org/rene-d/passe_temps.svg?branch=master)
+
 Classe C++ pour mesurer le temps passé dans des fonctions.
 
 ### Compilation
