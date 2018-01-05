@@ -3,8 +3,12 @@ language: cpp
 compiler: 
   - gcc
 
+install:
+  - sudo apt-get install libboost-dev
+
 script:
-  - cmake .
-  - make
-  - ls -l
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make 
   - ./passe_temps
