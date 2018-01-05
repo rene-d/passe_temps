@@ -6,4 +6,5 @@ compiler:
 script:
   - cmake .
   - make
+  - ls -l
   - ./passe_temps
