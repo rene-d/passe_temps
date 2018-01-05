@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.1)
 
 project(passe_temps)
 
-find_package(Boost 1.55.0 COMPONENTS chrono system)
+find_package(Boost COMPONENTS chrono system)
 if(Boost_FOUND)
   add_executable(passe_temps passe_temps.cpp)
   include_directories(${Boost_INCLUDE_DIRS})
