@@ -4,5 +4,6 @@ compiler:
   - gcc
 
 script:
-  - cmake --build
+  - cmake .
+  - cmake --build .
   - ./passe_temps
