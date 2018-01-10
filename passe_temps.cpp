@@ -160,7 +160,7 @@ private:
 
         ++n;
 
-        attente(c1);
+        attente(c1, 11);
 
         if (strpbrk(nom, "ABC"))
         {
