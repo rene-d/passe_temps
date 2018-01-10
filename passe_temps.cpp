@@ -144,12 +144,12 @@ public:
     }
 
 private:
-    void attente(int& c) const
+    void attente(int& c, int duree) const
     {
         ++c;
 
         // 10 ms
-        usleep(10000);
+        usleep(1000 * duree);
     }
 
     void run(const char *nom)
@@ -180,7 +180,7 @@ private:
     void f1(const char *nom)
     {
         std::cout << " f1 " << nom << std::endl;
-        attente(c2);
+        attente(c2, 13);
 
         if (n >= 9) return;
 
@@ -195,7 +195,7 @@ private:
     void f2(const char *nom)
     {
         std::cout << " f2 " << nom << std::endl;
-        attente(c3);
+        attente(c3, 17);
 
         if (strpbrk(nom, "xyz")) return;
 
